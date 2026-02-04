@@ -1,15 +1,16 @@
 "use client"
 
 import Image from "next/image";
-import { Users, Globe, Award } from "lucide-react";
+import { Users, Globe as GlobeIcon, Award } from "lucide-react";
+import { Globe } from "@/components/ui/globe";
 
 export default function ProposPage() {
     return (
         <div className="min-h-screen bg-background pb-20">
             {/* Hero */}
-            <div className="bg-gray-900 text-white py-24 relative overflow-hidden">
+            <div className="bg-gray-900 text-white pt-40 pb-24 relative overflow-hidden">
                 <Image
-                    src="https://placehold.co/1920x800/222/fff?text=Team+Innocents"
+                    src="/images/about-hero.jpg"
                     alt="Équipe"
                     fill
                     className="object-cover opacity-30"
@@ -29,7 +30,7 @@ export default function ProposPage() {
                     {[
                         { icon: Users, title: "Proximité", desc: "Nous travaillons directement avec les populations locales sans intermédiaires inutiles." },
                         { icon: Award, title: "Confiance", desc: "La transparence est notre devise. Chaque don est justifié et tracé." },
-                        { icon: Globe, title: "Universalité", desc: "Nous aidons sans distinction de race ou de religion, là où l'urgence nous appelle." }
+                        { icon: GlobeIcon, title: "Universalité", desc: "Nous aidons sans distinction de race ou de religion, là où l'urgence nous appelle." }
                     ].map((item, idx) => (
                         <div key={idx} className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center hover:transform hover:-translate-y-2 transition-transform">
                             <item.icon className="w-12 h-12 text-secondary mx-auto mb-6" />
@@ -63,13 +64,15 @@ export default function ProposPage() {
                 </div>
 
                 {/* Map Section */}
-                <div className="bg-secondary/10 rounded-3xl p-8 md:p-12 text-center mb-20">
+                <div className="bg-secondary/10 rounded-3xl p-8 md:p-12 text-center mb-20 overflow-hidden">
                     <h2 className="text-3xl font-bold text-primary mb-8">Zones d'Intervention</h2>
-                    <div className="relative aspect-[16/9] w-full bg-blue-200 rounded-xl overflow-hidden shadow-inner flex items-center justify-center">
-                        <Image src="https://placehold.co/1200x675/60a5fa/ffffff?text=Carte+Interactive+Monde" alt="Carte" fill className="object-cover opacity-80" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <p className="bg-white/90 px-6 py-2 rounded-full font-bold text-primary shadow-lg backdrop-blur-sm">
-                                Maroc • Sénégal • Tchad • Gaza • Soudan • Inde • Pakistan
+                    <div className="relative w-full overflow-visible flex flex-col items-center justify-center bg-primary rounded-3xl py-12 min-h-[500px]">
+                        <div className="absolute inset-0 flex items-center justify-center scale-150 transform z-10 pointer-events-none">
+                            <Globe className="max-w-[1000px]" />
+                        </div>
+                        <div className="mt-8 z-20 relative pt-[300px]">
+                            <p className="bg-white/90 text-primary px-6 py-2 rounded-full font-bold shadow-lg backdrop-blur-sm mx-auto max-w-fit">
+                                Maroc • Sénégal • Tchad • Gaza • Soudan • Inde • Pakistan • Maroc
                             </p>
                         </div>
                     </div>

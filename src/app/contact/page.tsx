@@ -5,7 +5,7 @@ import { Mail, MapPin, MessageSquare } from "lucide-react";
 export default function ContactPage() {
     return (
         <div className="min-h-screen bg-background pb-20">
-            <div className="bg-primary text-white py-16 text-center">
+            <div className="bg-primary text-white pt-36 pb-16 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 font-outfit">Contactez-nous</h1>
                     <p className="text-xl opacity-90">

@@ -22,7 +22,7 @@ export default function PuitsPage() {
                     <div className="grid md:grid-cols-2">
                         <div className="relative h-[300px] md:h-auto">
                             <Image
-                                src="https://placehold.co/800x800/eab308/ffffff?text=Puits+Tchad"
+                                src="/images/puits-tchad.jpg"
                                 alt="Puits Tchad"
                                 fill
                                 className="object-cover"
@@ -100,7 +100,7 @@ export default function PuitsPage() {
                         </div>
                         <div className="relative h-[300px] md:h-auto order-1 md:order-2">
                             <Image
-                                src="https://placehold.co/800x800/16a34a/ffffff?text=Puits+Pakistan"
+                                src="/images/puits-pakistan.jpg"
                                 alt="Puits Pakistan"
                                 fill
                                 className="object-cover"
@@ -119,7 +119,7 @@ export default function PuitsPage() {
                         {[1, 2, 3].map((i) => (
                             <div key={i} className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
                                 <Image
-                                    src={`https://placehold.co/600x400/999/fff?text=Puits+${i}`}
+                                    src={`/images/puits-${i}.jpg`}
                                     alt={`Puits réalisé ${i}`}
                                     fill
                                     className="object-cover hover:scale-105 transition-transform"

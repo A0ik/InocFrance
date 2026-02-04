@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { NavBar } from "@/components/ui/tubelight-navbar";
+import { Footer } from "@/components/footer";
+import { FAQ } from "@/components/faq";
+import { FloatingLogo } from "@/components/floating-logo";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -21,10 +24,15 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${outfit.variable} antialiased`}
+        className={`${outfit.variable} antialiased min-h-screen flex flex-col`}
       >
+        <FloatingLogo />
         <NavBar />
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
+        <FAQ />
+        <Footer />
       </body>
     </html>
   );

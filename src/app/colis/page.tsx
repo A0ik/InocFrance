@@ -29,7 +29,7 @@ function ProgressBar({ current, target, colorClass = "bg-green-500" }: { current
 export default function ColisPage() {
     return (
         <div className="min-h-screen bg-background pb-20">
-            <div className="bg-secondary/10 py-16 text-center">
+            <div className="bg-secondary/10 pt-36 pb-16 text-center">
                 <div className="container mx-auto px-4">
                     <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Colis Alimentaires</h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -44,7 +44,7 @@ export default function ColisPage() {
                 <section className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl order-2 md:order-1">
                         <Image
-                            src="https://placehold.co/800x600/1a365d/ffffff?text=Urgence+Gaza"
+                            src="/images/colis-gaza.jpg"
                             alt="Colis Gaza"
                             fill
                             className="object-cover"
@@ -117,7 +117,7 @@ export default function ColisPage() {
                     </div>
                     <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl order-2">
                         <Image
-                            src="https://placehold.co/800x600/60a5fa/ffffff?text=Colis+Maroc"
+                            src="/images/colis-maroc.jpg"
                             alt="Colis Maroc"
                             fill
                             className="object-cover"
